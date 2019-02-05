@@ -1,0 +1,39 @@
+symp
+Cough
+Cough with blood
+Fever
+
+
+fluidRow(
+                                        
+                                                          dateInput("dobs", label="DATE OF BIRTH:",
+                                                                                            min = "01-01-1960",
+                                                                                            max = Sys.Date(), format = "mm-dd-yyyy", 
+                                                                                            startview = "year",
+                                                                                            weekstart = 0, language = "en"),
+																							
+																							 fluidPage({
+                                        
+                                        fluidRow(
+                                        
+                                                          dateInput("dobs", label="DATE OF BIRTH:",
+                                                                                            min = "01-01-1960",
+                                                                                            max = Sys.Date(), format = "mm-dd-yyyy", 
+                                                                                            startview = "year",
+                                                                                            weekstart = 0, language = "en"),
+                                        
+                                       textInput("age",label = "AGE:")
+                                       )
+                                        #actionButton("calculate", "Calculate age"),
+                                       #uiOutput("calculatedage"))
+                                                 
+                                        
+                                      }),
+                                        
+										
+										   tabPanel("Data explorer",
+               
+                    hr(),
+                    DT::dataTableOutput("ziptable")
+           ),
+           
